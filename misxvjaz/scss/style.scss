@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "./helpers";
+
+body {
+  background-image: url(/images/background.jpg);
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  @include flexCenter(column);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  @include flexCenter(column);
+  gap: 24px;
+  width: 100%;
+  overflow-x: hidden;
+
+  section {
+    @include flexCenter(column);
+  }
+
+  // Marco Mis XV
+  .mis_xv {
+    margin-bottom: 8px;
+
+    img {
+      width: 360px;
+      height: auto;
+    }
+  }
+
+  // Fecha
+  .fecha_num {
+    img {
+      width: 95%;
+      max-width: 360px;
+    }
+  }
+
+  // Contador
+  .contador {
+    @include flexCenter(column);
+    overflow: hidden;
+    margin-bottom: -24px;
+
+    .cuenta_atras {
+      position: absolute;
+      transform: translateY(15px);
+      @include flexCenter(row);
+      gap: 2px;
+      color: $azul;
+
+      .bloque-tiempo {
+        @include flexCenter(column);
+        width: 50px;
+        font-family: "Playfair Display";
+        font-weight: 700;
+
+        .numero {
+          font-size: 45.082px;
+          line-height: 60px;
+        }
+
+        .etiqueta {
+          font-size: 13.52;
+          line-height: auto;
+        }
+      }
+
+      .separador {
+        font-size: 45px;
+        line-height: auto;
+        position: relative;
+        bottom: 4px;
+      }
+    }
+
+    img {
+      margin: -24px 0;
+    }
+  }
+
+  // Recomendar musica
+  .musica_inv {
+    @include flexCenter(column);
+  }
+
+  // Bendicion
+  .bendicion {
+    .texto {
+      position: absolute;
+      @include flexCenter(column);
+      width: 260px;
+      gap: 24px;
+
+      p,
+      span {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .first {
+        @include flexCenter(column);
+        gap: 12px;
+        font-family: $serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        span {
+          font-family: $cursiva;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: auto;
+        }
+      }
+
+      .second {
+        font-family: $serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .third {
+        width: 300px;
+        font-family: $cursiva;
+        font-size: 24px;
+
+        span {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  // Confirmacion
+  .confirmacion {
+    .texto {
+      @include flexCenter(column);
+      position: absolute;
+      gap: 4px;
+      transform: translate(48px, 90px);
+
+      .bajada {
+        text-align: center;
+        font-family: $serif;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -2%;
+        color: $azul;
+      }
+
+      .button {
+        padding: 4px 13px 8px 13px;
+      }
+    }
+  }
+
+  // Datos y Dress Code
+  .info {
+    .text_sup {
+      position: absolute;
+      transform: translateY(-232px);
+      @include flexCenter(column);
+      color: $azul;
+      font-family: $serif;
+      font-weight: 400;
+      text-align: center;
+      gap: 8px;
+      height: 350px;
+
+      .ubi {
+        width: auto;
+        height: 40px;
+        margin-top: 16px;
+      }
+
+      .hora {
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      .direccion {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -5%;
+      }
+
+      .puntual {
+        font-size: 24px;
+        line-height: 53px;
+      }
+
+      .button {
+        padding: 4px 13px 8px 13px;
+      }
+    }
+
+    .text_inf {
+      @include flexCenter(column);
+      position: absolute;
+      transform: translateY(240px);
+      gap: 8px;
+      color: #ffffff;
+
+      .titular {
+        color: #ffffff;
+        margin: -8px auto 4px;
+      }
+
+      .mid {
+        @include flexCenter(row);
+
+        .vestido {
+          margin-right: -20px;
+        }
+        .traje {
+          margin: 0 -20px;
+        }
+        img {
+          height: 120px;
+        }
+
+        .txt {
+          font-family: $cursiva;
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 54px;
+          text-align: center;
+        }
+      }
+      .reserva {
+        font-family: $serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #ffffff;
+        letter-spacing: -2%;
+      }
+    }
+  }
+
+  // Mesa de regalos
+  .regalos {
+    .texto {
+      @include flexCenter(column);
+      color: $azul;
+      text-align: center;
+      gap: 8px;
+      position: absolute;
+      transform: translateY(20px);
+      width: 280px;
+      scale: 0.95;
+
+      .transferencia {
+        font-family: $serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        width: 250px;
+        text-wrap: pretty;
+      }
+
+      .presencia {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        width: 210px;
+      }
+
+      .regalos-img {
+        width: 160px;
+        height: auto;
+      }
+
+      p {
+        letter-spacing: -3%;
+      }
+    }
+
+    .marco_7 {
+      width: 380px !important;
+      max-width: unset !important;
+    }
+  }
+
+  // Gracias
+  .gracias {
+    .txt {
+      font-family: $cursiva;
+      font-weight: 500;
+      font-size: 80px;
+      line-height: auto;
+      position: absolute;
+      transform: translateY(16px);
+      color: $azul;
+      letter-spacing: -2%;
+    }
+  }
+
+  // Enlaces rapidos
+  .fast_link {
+    background-color: $azul;
+    width: 100%;
+    padding: 24px 0;
+
+    .titular {
+      color: #ffffff;
+      font-size: 32px;
+      font-family: $serif;
+      font-weight: 700;
+    }
+
+    ul {
+      @include flexCenter(column);
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        margin: 4px 0;
+
+        a {
+          text-decoration: none;
+          font-family: $serif;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 32px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #main {
+    scale: 1.2;
+    transform-origin: top center;
+    width: max-content;
+  }
+}
