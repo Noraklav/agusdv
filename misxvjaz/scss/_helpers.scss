@@ -6,10 +6,8 @@
     justify-content: center;
 }
 
-$serif: 'Playfair Display',
-serif;
-$cursiva: "Birthstone Bounce",
-cursive;
+$serif: 'Playfair Display', serif;
+$cursiva: "Birthstone Bounce", cursive;
 $azul: #002F63;
 
 @mixin button() {

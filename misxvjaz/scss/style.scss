@@ -13,6 +13,72 @@ body {
   box-sizing: border-box;
 }
 
+.portada {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background-color: $azul;
+  color: #e6e9ef;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.portada.oculta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.portada_contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: $serif;
+}
+
+.portada_sub {
+  margin: 0;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.portada_titulo {
+  margin: 0;
+  font-size: clamp(3rem, 14vw, 5rem);
+  line-height: 1;
+  font-family: $cursiva;
+}
+
+.portada_nombre {
+  margin: 0 0 24px;
+  font-size: 1.6rem;
+}
+
+.portada_boton {
+  @include button();
+  background-color: #FFF;
+  color: $azul;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.portada_boton:hover,
+.portada_boton:focus-visible {
+  background: #c9ced8;
+  color: #1b2a4e;
+}
+
+/* Bloquea el scroll mientras la portada está abierta */
+body.bloqueado {
+  overflow: hidden;
+}
+
 #main {
   @include flexCenter(column);
   gap: 24px;

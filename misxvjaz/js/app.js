@@ -58,5 +58,26 @@ document.getElementById("btn-alias").addEventListener("click", () => {
 });
 
 // Musica
+// Musica + pantalla de entrada
 const musica = document.getElementById("musica-fondo");
 musica.volume = 0.35;
+
+const portada = document.getElementById("portada");
+const btnAbrir = document.getElementById("btn-abrir");
+
+document.body.classList.add("bloqueado");
+
+btnAbrir.addEventListener("click", () => {
+  // El play() va dentro del click para que el navegador lo permita
+  musica.play().catch((err) => {
+    console.error("No se pudo reproducir la música: ", err);
+  });
+
+  portada.classList.add("oculta");
+  document.body.classList.remove("bloqueado");
+
+  // Saca la portada del DOM cuando termina la animación
+  portada.addEventListener("transitionend", () => portada.remove(), {
+    once: true,
+  });
+});
